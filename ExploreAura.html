@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ExploreAura - Home</title>
+<style>
+  :root {
+    --primary-dark: #000;
+    --primary-medium: #8B5E3C;
+    --primary-light: #C49A6C;
+    --text-color: #fff;
+  }
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--primary-dark);
+    color: var(--text-color);
+  }
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+  }
+  .logo-home {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  .logo {
+    height: 50px;
+  }
+  .home-title {
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  nav {
+    display: flex;
+    gap: 20px;
+  }
+  nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  nav a:hover {
+    text-decoration: underline;
+  }
+  /* Hero section styles */
+#welcome {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
+  text-align: left;
+  padding: 0 50px;
+}
+.welcome-content {
+  max-width: 600px;
+}
+.welcome-title {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.welcome-subtext {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+.order-btn {
+  padding: 12px 24px;
+  background-color: var(--primary-light);
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+.order-btn:hover {
+  background-color: #A66C4E;
+}
+h2 {
+  padding: 40px 20px 20px;
+  font-size: 28px;
+  color: var(--primary-light);
+  margin: 0;
+}
+.section {
+  display: block; /* default show hero */
+  padding: 20px;
+}
+footer {
+  padding: 20px;
+  background-color: var(--primary-medium);
+  text-align: center;
+  margin-top: 40px;
+  font-size: 14px;
+}
+@media(max-width: 768px){
+  #welcome {
+    padding: 20px;
+  }
+  .welcome-title {
+    font-size: 32px;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo-home">
+    <img src="logo.jpeg" alt="Logo" class="logo" />
+    <div class="home-title" id="homePage">HOME</div>
+  </div>
+  <nav>
+    <a href="#about" id="aboutLink">About us</a>
+    <a href="contact.html" id="contactLink">Contact</a>
+    <a href="#services" id="servicesLink">Services</a>
+  </nav>
+</header>
+
+<!-- Welcome Hero Section -->
+<section id="welcome">
+  <div class="welcome-content">
+    <div class="welcome-title">WELCOME TO EXPLORAURA</div>
+    <div class="welcome-subtext">We've got you covered. Start your journey today!</div>
+    <button class="order-btn">Order</button>
+  </div>
+</section>
+
+<h2>OUR WORK</h2>
+<div class="section" id="work">
+  <p>Our portfolio or work showcase can go here.</p>
+</div>
+
+<h2>ANY QUESTIONS?</h2>
+<div class="question-form section" id="questions">
+  <form>
+    <label>Your name</label><br />
+    <input type="text" placeholder="Your name" /><br /><br />
+    <label>Your telephone number</label><br />
+    <input type="text" placeholder="Your telephone number" /><br /><br />
+    <label>Your question</label><br />
+    <textarea rows="4" placeholder="Your question"></textarea><br /><br />
+    <button type="submit">Send</button>
+  </form>
+</div>
+
+<!-- Footer -->
+<footer>
+  <div>Contact: +250 788888888</div>
+  <div>Location: Rwanda</div>
+</footer>
+
+<!-- JavaScript to handle "HOME" button in header -->
+<script>
+  document.getElementById('homePage').addEventListener('click', function() {
+    window.location.href = 'ExploreAura.html'; // reload same page
+  });
+</script>
+
+</body>
+</html>
